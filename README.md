@@ -1,4 +1,5 @@
 <h1>PizzaApp</h1>
+<p>Simple ordering a pizza.</p>
 <p>Microservices Netflix OSS: Spring + Angular</p>
 <p>Template - https://colorlib.com/wp/template/pizza/</p>
 
