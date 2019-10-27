@@ -1,0 +1,176 @@
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-3 pb-3">
+      <div class="col-md-7 heading-section ftco-animate text-center">
+        <h2 class="mb-4">Shopping cart</h2>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-md-12 ftco-animate">
+        <div *ngIf="cartProducts?.length > 0" class="shopping-cart-wrapper" id="shipping-cart">
+
+          <div class="shopping-cart">
+            <div class="loading" id="cart-loading"></div>
+
+            <div *ngFor="let product of cartProducts" class="item">
+              <div class="buttons">
+                <span class="delete-btn" (click)="removeProduct(product.productId)"></span>
+              </div>
+
+              <div class="image">
+                <img src="{{ product.image }}" alt="{{ product.name }}"/>
+              </div>
+
+              <div class="description">
+                <p>{{ product.shortDescription }}</p>
+              </div>
+
+              <div class="quantity">
+                <button class="plus-btn" (click)="changeQuantity('increase', product.productId, product.quantity)"
+                        type="button" name="button">
+                  <img src="/assets/images/plus.svg" alt=""/>
+                </button>
+                <input type="text" name="name" value="{{ product.quantity }}">
+                <button class="minus-btn" (click)="changeQuantity('decrease', product.productId, product.quantity)"
+                        type="button" name="button">
+                  <img src="/assets/images/minus.svg" alt=""/>
+                </button>
+              </div>
+
+              <div class="total-price">{{ product.price | currency: '$' }}</div>
+              <div class="total-price">{{ product.total | currency: '$' }}</div>
+            </div>
+
+          </div>
+
+          <div class="total-sum">
+            <div>Total products: {{ getCartTotal() }}</div>
+            <div>Total price: {{ getCartTotalSumFormat() | currency: '$' }}</div>
+          </div>
+
+          <div class="section-margin"></div>
+
+          <h3 class="mb-3">Personal information</h3>
+          <form id="order-form" class="appointment-form" [formGroup]="orderForm">
+            <div class="d-md-flex">
+              <div class="form-group required" [ngClass]="displayFieldCss('firstName')">
+                <input type="text" name="firstName" required="required" class="form-control" placeholder="First name *"
+                       formControlName="firstName">
+                <app-field-error-display
+                  [displayError]="isFieldValid('firstName')"
+                  errorMsg="First name is empty">
+                </app-field-error-display>
+              </div>
+            </div>
+            <div class="d-md-flex">
+              <div class="form-group required" [ngClass]="displayFieldCss('lastName')">
+                <input type="text" name="lastName" required="required" class="form-control" placeholder="Last name *"
+                       formControlName="lastName"/>
+                <app-field-error-display
+                  [displayError]="isFieldValid('lastName')"
+                  errorMsg="Last name is empty">
+                </app-field-error-display>
+              </div>
+            </div>
+            <div class="d-me-flex">
+              <div class="form-group required" [ngClass]="displayFieldCss('email')">
+                <input type="text" name="email" required="required" class="form-control" placeholder="Email *"
+                       formControlName="email">
+                <app-field-error-display
+                  [displayError]="isFieldValid('email')"
+                  errorMsg="Email is empty or incorrect">
+                </app-field-error-display>
+              </div>
+            </div>
+            <div class="d-me-flex">
+              <div class="form-group required" [ngClass]="displayFieldCss('city')">
+                <input type="text" name="city" class="form-control" placeholder="City *"
+                       formControlName="city">
+                <app-field-error-display
+                  [displayError]="isFieldValid('city')"
+                  errorMsg="City is empty">
+                </app-field-error-display>
+              </div>
+            </div>
+
+            <div class="section-margin"></div>
+
+            <h3 class="mb-3">Delivery method</h3>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="shippingMethod" formControlName="shippingMethod"
+                     checked="checked" id="delivery-pickup"
+                     value="pickup">
+              <label class="form-check-label" for="delivery-pickup">
+                Pickup
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="shippingMethod" formControlName="shippingMethod"
+                     id="delivery-courier"
+                     value="courier">
+              <label class="form-check-label" for="delivery-courier">
+                Courier
+              </label>
+            </div>
+            <app-field-error-display
+              [displayError]="isFieldValid('shippingMethod')"
+              errorMsg="Shipping method is required">
+            </app-field-error-display>
+
+            <div class="section-margin"></div>
+
+            <h3 class="mb-3">Payment method</h3>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="paymentMethod" id="payment-cash"
+                     formControlName="paymentMethod" value="cash" checked="checked">
+              <label class="form-check-label" for="payment-cash">
+                Cash
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="paymentMethod" id="payment-card"
+                     formControlName="paymentMethod" value="credit_card">
+              <label class="form-check-label" for="payment-card">
+                Credit Card
+              </label>
+            </div>
+            <app-field-error-display
+              [displayError]="isFieldValid('paymentMethod')"
+              errorMsg="Payment method is required">
+            </app-field-error-display>
+
+            <div class="section-margin"></div>
+
+            <h3 class="mb-3">Comment</h3>
+            <div class="form-group">
+              <textarea cols="30" rows="3" class="form-control" name="comment"
+                        formControlName="comment" placeholder="Comment"></textarea>
+            </div>
+
+            <div class="form-group">
+              <input type="submit" id="submit-order" value="Order" [hidden]="orderSuccess"
+                     class="btn btn-primary py-3 px-4" (click)="onSubmit()">
+            </div>
+
+            <div class="order-success" *ngIf="orderSuccess">
+              <p>Your order successfully sent</p>
+            </div>
+
+            <div class="order-error" *ngIf="orderError">
+              <p>Error while ordering.</p>
+            </div>
+          </form>
+
+        </div>
+
+        <div *ngIf="!cartProducts?.length" style="text-align: center" class="shopping-cart-wrapper">
+          <p>The cart is empty</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>

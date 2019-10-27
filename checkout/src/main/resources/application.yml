@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: "checkout-service"
+
+  datasource:
+    #initialization-mode: always
+    url: jdbc:postgresql://localhost:5432/checkout
+    username: postgres
+    password: password
+  jpa:
+    database: postgresql
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+        temp:
+          use_jdbc_metadata_defaults: false
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  devtools:
+    restart:
+      enabled: true
+  data:
+    rest:
+      base-path: "/api"
+      detection-strategy: annotated
+
+server:
+  port: 0
+
+eureka:
+  client:
+    service-url:
+      default-zone: "http://localhost:8761/eureka/"

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default">
+<body>
+
+<div id="page" layout:fragment="content">
+
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2 th:text="${product.name}"></h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <br/>
+                            <form id="form-init" enctype="multipart/form-data"
+                                  th:action="${action}" th:object="${product}" method="post"
+                                  data-parsley-validate
+                                  class="form-horizontal form-label-left">
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                        Name
+                                        <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <input type="text" th:field="${product.name}" required="required"
+                                               class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                        Short description <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea required="required" class="resizable_textarea form-control"
+                                                  style="min-height:100px"
+                                                  th:field="${product.shortDescription}"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                        Price <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <input type="number" required="required" class="form-control"
+                                               th:field="${product.price}"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">Image</label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <div style="height:100px; width:100px; overflow:hidden; margin-bottom:5px">
+                                            <div th:style="'width:100%; height:100%; background-size: cover; background-position: center; background-image: url(' + ${product.image} + ')'">
+                                            </div>
+                                        </div>
+                                        <input name="imageFile" type="file" style="display: none">
+                                        <input class="form-control" type="text" th:field="${product.image}"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Categories</label>
+                                    <div class="col-md-9 col-sm-9 col-xs-12">
+                                        <select th:name="categoryId" class="select2mk form-control">
+                                            <option th:each="category : ${categories}"
+                                                    th:value="${category.categoryId}"
+                                                    th:selected="${product.category != null
+                                                     && product.category.categoryId == category.categoryId}"
+                                                    th:text="${category.name}"></option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                        Date
+                                    </label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12 xdisplay_inputx has-feedback">
+                                        <input th:field="${product.createdAt}" type="text"
+                                               class="form-control has-feedback-left" id="single_cal2"
+                                               aria-describedby="inputSuccess2Status2">
+                                        <span class="fa fa-calendar-o form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                        <span id="inputSuccess2Status2" class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">Hot</label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <div class="">
+                                            <label>
+                                                <input type="checkbox" th:field="${product.hot}" class="js-switch"
+                                                />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-2">
+                                        <button type="submit" style="min-width:150px; min-height:40px"
+                                                class="btn btn-success">Submit
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <input type="hidden" th:field="${product.productId}"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /page content -->
+
+</div>
+</body>
+</html>

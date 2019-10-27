@@ -1,0 +1,51 @@
+<section class="ftco-appointment">
+  <div class="overlay"></div>
+  <div class="container-wrap">
+    <div class="row no-gutters d-md-flex align-items-center">
+      <div class="col-md-6 d-flex align-self-stretch">
+        <div id="map"></div>
+      </div>
+      <div class="col-md-6 appointment ftco-animate">
+        <h3 class="mb-3">Contact Us</h3>
+        <form class="appointment-form" [formGroup]="contactForm">
+          <div class="d-md-flex">
+            <div class="form-group required" [ngClass]="displayFieldCss('firstname')">
+              <input type="text" class="form-control" name="firstname" placeholder="First Name *" formControlName="firstname">
+              <app-field-error-display
+                [displayError]="isFieldValid('firstname')"
+                errorMsg="First name is empty">
+              </app-field-error-display>
+            </div>
+          </div>
+          <div class="d-me-flex">
+            <div class="form-group required" [ngClass]="displayFieldCss('lastname')">
+              <input type="text" class="form-control" name="lastname" placeholder="Last Name *" formControlName="lastname">
+              <app-field-error-display
+                [displayError]="isFieldValid('lastname')"
+                errorMsg="Last name is empty">
+              </app-field-error-display>
+            </div>
+          </div>
+          <div class="form-group required" [ngClass]="displayFieldCss('message')">
+            <textarea name="message" cols="30" rows="3" class="form-control" placeholder="Message *" formControlName="message"></textarea>
+            <app-field-error-display
+              [displayError]="isFieldValid('message')"
+              errorMsg="Message is empty">
+            </app-field-error-display>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="Send" [hidden]="contactSuccess" (click)="onSubmit()" class="btn btn-primary py-3 px-4">
+          </div>
+
+          <div class="comment-success" *ngIf="contactSuccess">
+            <p>Your message successfully sent</p>
+          </div>
+
+          <div class="comment-error" *ngIf="contactError">
+            <p>Error while sending message.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

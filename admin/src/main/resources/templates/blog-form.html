@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default">
+<body>
+
+<div id="page" layout:fragment="content">
+
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2 th:text="${post.title}"></h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <br/>
+                            <form id="form-init" enctype="multipart/form-data"
+                                  th:action="${action}" th:object="${post}" method="post"
+                                  data-parsley-validate
+                                  class="form-horizontal form-label-left">
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                        Title
+                                        <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <input type="text" th:field="${post.title}" required="required"
+                                               class="form-control col-md-7 col-xs-12">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                        Description <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea required="required" class="resizable_textarea form-control"
+                                                  style="min-height:300px"
+                                                  th:field="${post.description}"></textarea>
+                                    </div>
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                        Short description <span class="required">*</span>
+                                    </label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <textarea required="required" class="resizable_textarea form-control"
+                                                  style="min-height:100px"
+                                                  th:field="${post.shortDescription}"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">Image</label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12">
+                                        <div style="height:100px; width:100px; overflow:hidden; margin-bottom:5px">
+                                            <div th:style="'width:100%; height:100%; background-size: cover; background-position: center; background-image: url(' + ${post.image} + ')'">
+                                            </div>
+                                        </div>
+                                        <input name="imageFile" type="file" style="display: none">
+                                        <input class="form-control" type="text" th:field="${post.image}"/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label col-md-2 col-sm-2 col-xs-12">
+                                        Date
+                                    </label>
+                                    <div class="col-md-10 col-sm-10 col-xs-12 xdisplay_inputx has-feedback">
+                                        <input th:field="${post.createdAt}" type="text"
+                                               class="form-control has-feedback-left" id="single_cal2"
+                                               aria-describedby="inputSuccess2Status2">
+                                        <span class="fa fa-calendar-o form-control-feedback left"
+                                              aria-hidden="true"></span>
+                                        <span id="inputSuccess2Status2" class="sr-only">(success)</span>
+                                    </div>
+                                </div>
+
+                                <div class="ln_solid"></div>
+                                <div class="form-group">
+                                    <div class="col-md-12 col-sm-12 col-xs-12 col-md-offset-2">
+                                        <button type="submit" style="min-width:150px; min-height:40px"
+                                                class="btn btn-success">Submit
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <input type="hidden" th:field="${post.postId}"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- /page content -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<section class="home-slider owl-carousel img" style="background-image: url(../../../assets/images/bg_1.jpg);">
+
+  <div class="slider-item" style="background-image: url(../../../assets/images/bg_3.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row slider-text justify-content-center align-items-center">
+
+        <div class="col-md-7 col-sm-12 text-center ftco-animate">
+          <h1 class="mb-3 mt-5 bread">Read our Blog</h1>
+          <p class="breadcrumbs"><span class="mr-2"><a href="/">Home</a></span> <span>Blog</span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section">
+  <div class="container">
+    <div class="row justify-content-center mb-5 pb-3">
+      <div class="col-md-7 heading-section ftco-animate text-center">
+        <h2 class="mb-4">Read our blog</h2>
+        <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+          texts.</p>
+      </div>
+    </div>
+    <div class="row d-flex">
+
+      <div *ngFor="let post of posts" class="col-md-4 d-flex ftco-animate">
+        <div class="blog-entry align-self-stretch">
+          <a href="{{ post.href }}" class="block-20"
+             [ngStyle]="{'background-image': 'url(' + post.image + ')'}">
+          </a>
+          <div class="text py-4 d-block">
+            <div class="meta">
+              <div><a href="{{ post.href }}">{{ post.createdAt | date: "dd MMMM y" }}</a></div>
+              <div><a href="{{ post.href }}" class="meta-chat"><span class="icon-chat"></span> {{ post.commentCount }}
+              </a></div>
+            </div>
+            <h3 class="heading mt-2"><a href="{{ post.href }}">{{ post.title }}</a></h3>
+            <p>{{ post.shortDescription }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row mt-5" *ngIf="pagination?.totalPages > 1">
+      <div class="col text-center">
+        <div class="block-27">
+          <ul>
+            <li *ngFor="let page of getPagination()"
+                [class.active]="page.active" class="active">
+              <a href="#" (click)="switchPage(page.number);">{{ page.text }}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

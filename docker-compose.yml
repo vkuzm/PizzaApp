@@ -1,0 +1,25 @@
+version: "3.1"
+
+networks:
+  pizza-backend:
+
+services:
+
+  db:
+    image: postgres:latest
+    container_name: pizza_db
+    restart: always
+    environment:
+      #- POSTGRES_DB=postgres
+      #- POSTGRES_USER=root
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - postgres_database:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - pizza-backend
+
+volumes:
+  postgres_database:
+    external: true
