@@ -17,11 +17,9 @@
   
   <h2>Demonstration</h2>
   <h4>Front-End</h4>
-<p>Template - https://colorlib.com/wp/template/pizza/
-  <img src="/demo.gif" alt="">
-  </p>
+<p>Template - https://colorlib.com/wp/template/pizza/</p>
+ <img src="/demo.gif" alt="">
   
-    <h4>Admin panel</h4>
-    <p>Admin template - https://colorlib.com/polygon/gentelella/
-  <img src="/demo-admin.png" alt="">
-</p>
+<h4>Admin panel</h4>
+<p>Template - https://colorlib.com/polygon/gentelella/</p>
+ <img src="/demo-admin.png" alt="">
