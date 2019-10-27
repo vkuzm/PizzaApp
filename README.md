@@ -1,5 +1,5 @@
 <h1>PizzaApp</h1>
-<p>Simple ordering a pizza.</p>
+<p>Simple pizza order.</p>
 <p>Microservices Netflix OSS: Spring + Angular</p>
 <p>Template - https://colorlib.com/wp/template/pizza/</p>
 
@@ -16,5 +16,5 @@
 <li>Hibernate</li>
   </ul>
   
-  <h2>Demonstation</h2>
+  <h2>Demonstration</h2>
   <img src="/demo.gif" alt="">
