@@ -14,10 +14,18 @@ target/
 .sts4-cache
 
 ### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
+#.idea
+#*.iws
+#*.iml
+#*.ipr
+.idea/sonarlint
+.idea/vcs
+.idea/jsLinters
+.idea/compiler.xml
+.idea/checkstyle-idea.xml
+.idea/encodings.xml
+.idea/inspectionProfiles
+.idea/vcs.xml
 
 ### NetBeans ###
 /nbproject/private/
@@ -71,7 +79,7 @@ buildNumber.properties
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
+#.idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
