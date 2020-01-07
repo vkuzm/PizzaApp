@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7058f993-053d-4931-a0f1-f347e2bf1be2" name="Default Changelist" comment="Checkout fix">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/admin.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/checkout/checkout.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email/email.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/front/front.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/information/information.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/product.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -122,10 +111,10 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+            <state relative-caret-position="153">
+              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -182,7 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="16bc0843-1419-4aed-912b-53763779370f/database/common/schema/public/table/task_lock.sql" />
         <option value="$PROJECT_DIR$/common/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/common/pom.xml" />
         <option value="$PROJECT_DIR$/information/src/main/resources/application.yml" />
@@ -233,6 +221,7 @@
         <option value="$PROJECT_DIR$/email/src/main/java/com/vkuzmenko/pizza/email/Constants.java" />
         <option value="$PROJECT_DIR$/front/package-lock.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.travis.yml" />
       </list>
     </option>
   </component>
@@ -267,9 +256,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -624,6 +613,7 @@
       <workItem from="1571995992889" duration="137000" />
       <workItem from="1571996954846" duration="1652000" />
       <workItem from="1578403976756" duration="1459000" />
+      <workItem from="1578411176733" duration="431000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <created>1562004721783</created>
@@ -710,7 +700,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="832254000" />
+    <option name="totallyTimeSpent" value="832685000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -723,15 +713,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49923897" visible="true" weight="0.25506073" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49923897" visible="true" weight="0.25506073" />
       <window_info id="Structure" order="1" sideWeight="0.50076103" side_tool="true" weight="0.26948288" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" sideWeight="0.5011338" side_tool="true" weight="0.26948288" />
       <window_info id="Learn" order="5" />
       <window_info id="Web" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="SonarLint" />
       <window_info anchor="bottom" id="SQL Generator" order="0" weight="0.32876712" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49745083" weight="0.44745222" />
@@ -743,7 +733,7 @@
       <window_info anchor="bottom" id="TODO" order="8" sideWeight="0.49963585" weight="0.32876712" />
       <window_info anchor="bottom" id="Spring" order="9" weight="0.32724506" />
       <window_info anchor="bottom" id="Database Console" order="10" sideWeight="0.4989075" weight="0.45700637" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49745083" visible="true" weight="0.32931036" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49745083" weight="0.5741379" />
       <window_info anchor="bottom" id="Docker" order="12" sideWeight="0.49817917" weight="0.5" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.24840765" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.6431034" />
@@ -757,7 +747,7 @@
       <window_info anchor="bottom" id="CheckStyle" order="22" weight="0.4003044" />
       <window_info anchor="bottom" id="PMD" order="23" weight="0.45509893" />
       <window_info anchor="bottom" id="Event Log" order="24" sideWeight="0.5025492" side_tool="true" weight="0.43378997" />
-      <window_info anchor="right" id="Jms Messenger" />
+      <window_info anchor="bottom" id="SonarLint" order="25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.24981792" />
@@ -767,6 +757,7 @@
       <window_info anchor="right" id="Coverage" order="6" sideWeight="0.50124687" side_tool="true" weight="0.199563" />
       <window_info anchor="right" id="Database" order="7" sideWeight="0.49875313" weight="0.19894895" />
       <window_info anchor="right" id="Bean Validation" order="8" weight="0.3292061" />
+      <window_info anchor="right" id="Jms Messenger" order="9" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1134,13 +1125,17 @@
     <entry file="file://$PROJECT_DIR$/front/front.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.travis.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        <state relative-caret-position="-760">
+          <caret line="81" column="23" lean-forward="true" selection-start-line="81" selection-start-column="23" selection-end-line="81" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
         </state>
       </provider>
     </entry>
