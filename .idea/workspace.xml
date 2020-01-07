@@ -5,7 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7058f993-053d-4931-a0f1-f347e2bf1be2" name="Default Changelist" comment="Checkout fix">
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/all.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/admin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/admin.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout/checkout.iml" beforeDir="false" afterPath="$PROJECT_DIR$/checkout/checkout.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/checkout/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/checkout/src/test/java/com/vkuzmenko/pizza/checkout/controller/OrderApiControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/checkout/src/test/java/com/vkuzmenko/pizza/checkout/controller/OrderApiControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email/email.iml" beforeDir="false" afterPath="$PROJECT_DIR$/email/email.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/email/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email/src/test/java/com/vkuzmenko/pizza/email/controller/EmailApiControllerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/information/information.iml" beforeDir="false" afterPath="$PROJECT_DIR$/information/information.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/information/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/information/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/product/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/product.iml" beforeDir="false" afterPath="$PROJECT_DIR$/product/product.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registry/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/registry/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -108,19 +126,6 @@
   <component name="FavoritesManager">
     <favorites_list name="pizza" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.travis.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -171,16 +176,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/common/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/common/pom.xml" />
-        <option value="$PROJECT_DIR$/information/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/information/pom.xml" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/vkuzmenko/pizza/admin/Constants.java" />
-        <option value="$PROJECT_DIR$/front/src/app/apiUrls.ts" />
-        <option value="$PROJECT_DIR$/email/src/test/java/com/vkuzmenko/pizza/email/controller/EmailApiControllerTest.java" />
-        <option value="$PROJECT_DIR$/product/src/main/java/com/vkuzmenko/pizza/product/controller/ProductApiController.java" />
-        <option value="$PROJECT_DIR$/product/src/main/java/com/vkuzmenko/pizza/product/service/ProductServiceImpl.java" />
-        <option value="$PROJECT_DIR$/admin/src/main/java/com/vkuzmenko/pizza/admin/service/ProductServiceImpl.java" />
         <option value="$PROJECT_DIR$/admin/src/main/java/com/vkuzmenko/pizza/admin/controller/ProductController.java" />
         <option value="$PROJECT_DIR$/admin/src/main/resources/templates/product-form.html" />
         <option value="$PROJECT_DIR$/information/src/main/java/com/vkuzmenko/pizza/information/controller/BlogApiController.java" />
@@ -222,6 +217,16 @@
         <option value="$PROJECT_DIR$/front/package-lock.json" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/admin/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/information/pom.xml" />
+        <option value="$PROJECT_DIR$/product/pom.xml" />
+        <option value="$PROJECT_DIR$/registry/pom.xml" />
+        <option value="$PROJECT_DIR$/gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/checkout/pom.xml" />
+        <option value="$PROJECT_DIR$/common/pom.xml" />
+        <option value="$PROJECT_DIR$/email/pom.xml" />
+        <option value="$PROJECT_DIR$/checkout/src/test/java/com/vkuzmenko/pizza/checkout/controller/OrderApiControllerTest.java" />
       </list>
     </option>
   </component>
@@ -235,7 +240,21 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="admin" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="all" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="all" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="checkout" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="checkout" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
       <select />
@@ -257,7 +276,43 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="pizza" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pizza" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pizza" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pizza" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pizza" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pizza" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pizza" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pizza" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pizza" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pizza" type="462c0819:PsiDirectoryNode" />
+              <item name="email" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -352,46 +407,70 @@
     </option>
     <option name="contentProportion" value="0.23643123" />
   </component>
-  <component name="RunManager" selected="Spring Boot.ServerGateway">
-    <configuration name="CustomFieldRepositoryTest.whenFindAll_thenReturnCustomFieldList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="common" />
+  <component name="RunManager" selected="JUnit.All in email">
+    <configuration name="All in email" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="email" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderApiControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="checkout" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vkuzmenko.pizza.common.repository.*" />
+          <option name="PATTERN" value="com.vkuzmenko.pizza.checkout.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.vkuzmenko.pizza.common.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.vkuzmenko.pizza.common.repository.CustomFieldRepositoryTest" />
-      <option name="METHOD_NAME" value="whenFindAll_thenReturnCustomFieldList" />
+      <option name="PACKAGE_NAME" value="com.vkuzmenko.pizza.checkout.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.vkuzmenko.pizza.checkout.controller.OrderApiControllerTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrderApiControllerTest.whenFindAll_thenReturnProductList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="checkout" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.vkuzmenko.pizza.checkout.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.vkuzmenko.pizza.checkout.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.vkuzmenko.pizza.checkout.controller.OrderApiControllerTest" />
+      <option name="METHOD_NAME" value="whenFindAll_thenReturnProductList" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProductRepositoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="product" />
+    <configuration name="OrderApiControllerTest.whenFindById_thenReturnOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="checkout" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vkuzmenko.pizza.product.repository.*" />
+          <option name="PATTERN" value="com.vkuzmenko.pizza.checkout.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.vkuzmenko.pizza.product.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.vkuzmenko.pizza.product.repository.ProductRepositoryTest" />
+      <option name="PACKAGE_NAME" value="com.vkuzmenko.pizza.checkout.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.vkuzmenko.pizza.checkout.controller.OrderApiControllerTest" />
+      <option name="METHOD_NAME" value="whenFindById_thenReturnOrder" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="com.vkuzmenko.pizza.common in common" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="common" />
+    <configuration name="com.vkuzmenko.pizza.checkout.controller in checkout" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="checkout" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.vkuzmenko.pizza.common.*" />
+          <option name="PATTERN" value="com.vkuzmenko.pizza.checkout.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.vkuzmenko.pizza.common" />
+      <option name="PACKAGE_NAME" value="com.vkuzmenko.pizza.checkout.controller" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -479,9 +558,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JUnit.com.vkuzmenko.pizza.common in common" />
-      <item itemvalue="JUnit.CustomFieldRepositoryTest.whenFindAll_thenReturnCustomFieldList" />
-      <item itemvalue="JUnit.ProductRepositoryTest" />
       <item itemvalue="npm.FrontService" />
       <item itemvalue="Spring Boot.ServerRegistry" />
       <item itemvalue="Spring Boot.CheckoutService" />
@@ -491,12 +567,19 @@
       <item itemvalue="Spring Boot.CommonService" />
       <item itemvalue="Spring Boot.InformationService" />
       <item itemvalue="Spring Boot.ServerGateway" />
+      <item itemvalue="JUnit.OrderApiControllerTest" />
+      <item itemvalue="JUnit.OrderApiControllerTest.whenFindAll_thenReturnProductList" />
+      <item itemvalue="JUnit.OrderApiControllerTest.whenFindById_thenReturnOrder" />
+      <item itemvalue="JUnit.com.vkuzmenko.pizza.checkout.controller in checkout" />
+      <item itemvalue="JUnit.All in email" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.com.vkuzmenko.pizza.common in common" />
-        <item itemvalue="JUnit.CustomFieldRepositoryTest.whenFindAll_thenReturnCustomFieldList" />
-        <item itemvalue="JUnit.ProductRepositoryTest" />
+        <item itemvalue="JUnit.All in email" />
+        <item itemvalue="JUnit.com.vkuzmenko.pizza.checkout.controller in checkout" />
+        <item itemvalue="JUnit.OrderApiControllerTest.whenFindById_thenReturnOrder" />
+        <item itemvalue="JUnit.OrderApiControllerTest.whenFindAll_thenReturnProductList" />
+        <item itemvalue="JUnit.OrderApiControllerTest" />
       </list>
     </recent_temporary>
   </component>
@@ -613,7 +696,7 @@
       <workItem from="1571995992889" duration="137000" />
       <workItem from="1571996954846" duration="1652000" />
       <workItem from="1578403976756" duration="1459000" />
-      <workItem from="1578411176733" duration="431000" />
+      <workItem from="1578411176733" duration="3741000" />
     </task>
     <task id="LOCAL-00001" summary="1.0">
       <created>1562004721783</created>
@@ -668,27 +751,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CustomFieldRepositoryTest_whenFindAll_thenReturnCustomFieldList - 2019.10.14 at 11h 29m 00s.xml">
-      <configuration name="CustomFieldRepositoryTest.whenFindAll_thenReturnCustomFieldList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomFieldRepositoryTest_whenFindAll_thenReturnCustomFieldList - 2019.10.14 at 11h 29m 42s.xml">
-      <configuration name="CustomFieldRepositoryTest.whenFindAll_thenReturnCustomFieldList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomFieldRepositoryTest_whenFindAll_thenReturnCustomFieldList - 2019.10.14 at 11h 32m 08s.xml">
-      <configuration name="CustomFieldRepositoryTest.whenFindAll_thenReturnCustomFieldList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomFieldRepositoryTest_whenFindAll_thenReturnCustomFieldList - 2019.10.14 at 11h 32m 42s.xml">
-      <configuration name="CustomFieldRepositoryTest.whenFindAll_thenReturnCustomFieldList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomFieldRepositoryTest_whenFindAll_thenReturnCustomFieldList - 2019.10.14 at 11h 35m 42s.xml">
-      <configuration name="CustomFieldRepositoryTest.whenFindAll_thenReturnCustomFieldList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomFieldRepositoryTest_whenFindAll_thenReturnCustomFieldList - 2019.10.14 at 11h 38m 43s.xml">
-      <configuration name="CustomFieldRepositoryTest.whenFindAll_thenReturnCustomFieldList" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="CustomFieldRepositoryTest_whenFindAll_thenReturnCustomFieldList - 2019.10.14 at 11h 40m 32s.xml">
-      <configuration name="CustomFieldRepositoryTest.whenFindAll_thenReturnCustomFieldList" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CustomFieldRepositoryTest_whenFindAll_thenReturnCustomFieldList - 2019.10.14 at 11h 41m 11s.xml">
       <configuration name="CustomFieldRepositoryTest.whenFindAll_thenReturnCustomFieldList" configurationId="JUnit" />
     </history-entry>
@@ -698,9 +760,30 @@
     <history-entry file="com_vkuzmenko_pizza_common_in_common - 2019.10.14 at 11h 43m 14s.xml">
       <configuration name="com.vkuzmenko.pizza.common in common" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="OrderRepositoryTest - 2020.01.07 at 18h 06m 38s.xml">
+      <configuration name="OrderRepositoryTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderApiControllerTest - 2020.01.07 at 18h 08m 41s.xml">
+      <configuration name="OrderApiControllerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderApiControllerTest_whenFindAll_thenReturnProductList - 2020.01.07 at 18h 11m 05s.xml">
+      <configuration name="OrderApiControllerTest.whenFindAll_thenReturnProductList" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderApiControllerTest_whenFindById_thenReturnOrder - 2020.01.07 at 18h 13m 23s.xml">
+      <configuration name="OrderApiControllerTest.whenFindById_thenReturnOrder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderApiControllerTest_whenFindById_thenReturnOrder - 2020.01.07 at 18h 15m 51s.xml">
+      <configuration name="OrderApiControllerTest.whenFindById_thenReturnOrder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="OrderApiControllerTest_whenFindById_thenReturnOrder - 2020.01.07 at 18h 16m 31s.xml">
+      <configuration name="OrderApiControllerTest.whenFindById_thenReturnOrder" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_vkuzmenko_pizza_checkout_controller_in_checkout - 2020.01.07 at 18h 16m 53s.xml">
+      <configuration name="com.vkuzmenko.pizza.checkout.controller in checkout" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="832685000" />
+    <option name="totallyTimeSpent" value="835995000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -713,9 +796,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="735" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49923897" visible="true" weight="0.25506073" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49923897" visible="true" weight="0.23238866" />
       <window_info id="Structure" order="1" sideWeight="0.50076103" side_tool="true" weight="0.26948288" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -724,7 +806,7 @@
       <window_info id="Web" order="6" side_tool="true" />
       <window_info anchor="bottom" id="SQL Generator" order="0" weight="0.32876712" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49745083" weight="0.44745222" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49745083" visible="true" weight="0.67241377" />
       <window_info anchor="bottom" id="Find" order="3" weight="0.44310346" />
       <window_info anchor="bottom" id="TypeScript" order="4" weight="0.32876712" />
       <window_info anchor="bottom" id="Debug" order="5" weight="0.90258753" />
@@ -751,7 +833,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="1" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.24981792" />
-      <window_info anchor="right" id="Maven" order="3" weight="0.32793522" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.32793522" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
       <window_info anchor="right" id="Coverage" order="6" sideWeight="0.50124687" side_tool="true" weight="0.199563" />
@@ -822,104 +904,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/service/CheckoutService.java" />
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/service/CartService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/service/OrderService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/service/CheckoutServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/domain/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/domain/OrderProduct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/repository/OrderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/controller/BaseApiController.java" />
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/controller/CheckoutApiController.java" />
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/controller/CartApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/helper/PageBuilder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/dto/AddToCart.java" />
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/dto/CartItemDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/dto/ProductDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/Constants.java" />
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="22" lean-forward="true" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/service/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-911">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/service/NotificationServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -979,16 +963,6 @@
             <element signature="imports" expanded="true" />
             <element signature="e#422#691#0" expanded="true" />
             <element signature="e#690#691#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/email/src/test/java/com/vkuzmenko/pizza/email/controller/EmailApiControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1082,9 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/src/main/java/com/vkuzmenko/pizza/admin/Application.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -1105,13 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/email/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1122,9 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/front.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-760">
@@ -1134,8 +1095,140 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state relative-caret-position="170">
+          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/front.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15115">
+          <caret line="330" column="12" selection-start-line="330" selection-start-column="3" selection-end-line="330" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/all.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/admin.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/information/information.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product/product.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" selection-start-line="5" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/checkout.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/email/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="27" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/information/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="5" selection-start-line="5" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/product/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registry/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/src/test/java/com/vkuzmenko/pizza/checkout/repository/OrderRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="55" column="28" lean-forward="true" selection-start-line="55" selection-start-column="28" selection-end-line="55" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/src/test/java/com/vkuzmenko/pizza/checkout/controller/CartApiControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/src/main/java/com/vkuzmenko/pizza/checkout/helper/PageBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/checkout/src/test/java/com/vkuzmenko/pizza/checkout/controller/OrderApiControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="70" column="11" selection-start-line="70" selection-start-column="11" selection-end-line="70" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/email/src/test/java/com/vkuzmenko/pizza/email/controller/EmailApiControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1202,7 +1295,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>common</last-edited>
+          <last-edited>all</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

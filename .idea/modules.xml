@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/admin/admin.iml" filepath="$PROJECT_DIR$/admin/admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/all.iml" filepath="$PROJECT_DIR$/all.iml" />
       <module fileurl="file://$PROJECT_DIR$/checkout/checkout.iml" filepath="$PROJECT_DIR$/checkout/checkout.iml" />
       <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
       <module fileurl="file://$PROJECT_DIR$/email/email.iml" filepath="$PROJECT_DIR$/email/email.iml" />
