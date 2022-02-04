@@ -1,3 +1,124 @@
+create table blog(
+    post_id bigint not null primary key,
+    created_at        varchar(255),
+    description       varchar(10000),
+    image             varchar(255),
+    short_description varchar(500),
+    title             varchar(255)
+);
+
+alter table blog owner to postgres;
+
+create table comments(
+    id bigint not null primary key,
+    created_at varchar(255),
+    email      varchar(255),
+    message    varchar(500),
+    name       varchar(255),
+    post_id    bigint not null
+        constraint fks4rbna18vmp09nl71emqywmgy
+            references blog
+);
+
+alter table comments owner to postgres;
+
+create table pages (
+    id bigint not null primary key,
+    created_at        timestamp,
+    description       varchar(10000),
+    h1                varchar(255),
+    href              varchar(255),
+    short_description varchar(1000),
+    title             varchar(255)
+);
+
+alter table pages owner to postgres;
+
+create table orders(
+    order_id bigint not null primary key,
+    comment         varchar(50),
+    email           varchar(255),
+    first_name      varchar(20),
+    last_name       varchar(20),
+    order_date      varchar(255),
+    payment_method  varchar(255),
+    shipping_method varchar(255),
+    subtotal        integer,
+    total           integer
+);
+
+alter table orders owner to postgres;
+
+create table order_product (
+    id bigint  not null primary key,
+    price        integer not null,
+    product_name varchar(255),
+    quantity     integer not null,
+    total        integer not null,
+    order_id     bigint  not null
+        constraint fkl5mnj9n0di7k1v90yxnthkc73
+            references orders
+);
+
+alter table order_product owner to postgres;
+
+create table custom_fields(
+    id bigint  not null primary key,
+    content    varchar(10000),
+    field_name varchar(255),
+    sort       integer not null
+        constraint custom_fields_sort_check
+            check (sort >= 0)
+);
+
+alter table custom_fields owner to postgres;
+
+create table slider (
+    id bigint  not null primary key,
+    background_image boolean not null,
+    description      varchar(1000),
+    image            varchar(255),
+    justify_center   boolean not null,
+    order_button     boolean not null,
+    product_id       integer default 0,
+    styles           varchar(255),
+    subtitle         varchar(255),
+    title            varchar(255),
+    view_button      boolean not null
+);
+
+alter table slider owner to postgres;
+
+create table categories (
+    id bigint  not null primary key,
+    created_at  varchar(255),
+    description varchar(10000),
+    name        varchar(255),
+    sort        integer not null
+);
+
+alter table categories owner to postgres;
+
+create table products(
+    id bigint not null primary key,
+    created_at        varchar(255),
+    description       varchar(10000),
+    hot               boolean,
+    image             varchar(255),
+    name              varchar(255),
+    price             integer,
+    short_description varchar(500),
+    category_id       bigint
+        constraint fkog2rp4qthbtt2lfyhfo32lsw9
+            references categories
+);
+
+alter table products owner to postgres;
+
+INSERT INTO public.orders (order_id, comment, email, first_name, last_name, order_date, payment_method, shipping_method, subtotal, total) VALUES (33, 'dads', 'email@dsa.as', 'Max', 'Black', '12/12/2018', 'cash', 'courier', 13, 13);
+INSERT INTO public.orders (order_id, comment, email, first_name, last_name, order_date, payment_method, shipping_method, subtotal, total) VALUES (62, 'comment', 'email@dsa.as', 'Alex', 'Black', null, 'credit_card', 'pickup', 9, 9);
+INSERT INTO public.orders (order_id, comment, email, first_name, last_name, order_date, payment_method, shipping_method, subtotal, total) VALUES (83, 'dsad', 'test@asd.ru', 'dsad', 'dasd', null, 'credit_card', 'pickup', 6, 6);
+INSERT INTO public.orders (order_id, comment, email, first_name, last_name, order_date, payment_method, shipping_method, subtotal, total) VALUES (99, 'dsadadasdasd', 'test@com.com', 'Test', 'test', null, 'credit_card', 'pickup', 28, 28);
 INSERT INTO public.order_product (id, price, product_name, quantity, total, order_id) VALUES (34, 2, 'Italian Pizza', 1, 2, 33);
 INSERT INTO public.order_product (id, price, product_name, quantity, total, order_id) VALUES (35, 3, 'Tomatoe Pie', 1, 3, 33);
 INSERT INTO public.order_product (id, price, product_name, quantity, total, order_id) VALUES (36, 6, 'Caucasian Pizza', 1, 6, 33);
@@ -8,10 +129,6 @@ INSERT INTO public.order_product (id, price, product_name, quantity, total, orde
 INSERT INTO public.order_product (id, price, product_name, quantity, total, order_id) VALUES (100, 10, 'Pizza Cheese', 1, 10, 99);
 INSERT INTO public.order_product (id, price, product_name, quantity, total, order_id) VALUES (101, 2, 'Italian Pizza', 1, 2, 99);
 INSERT INTO public.order_product (id, price, product_name, quantity, total, order_id) VALUES (102, 4, 'American Pizza', 4, 16, 99);
-INSERT INTO public.orders (order_id, comment, email, first_name, last_name, order_date, payment_method, shipping_method, subtotal, total) VALUES (33, 'dads', 'email@dsa.as', 'Max', 'Black', '12/12/2018', 'cash', 'courier', 13, 13);
-INSERT INTO public.orders (order_id, comment, email, first_name, last_name, order_date, payment_method, shipping_method, subtotal, total) VALUES (62, 'comment', 'email@dsa.as', 'Alex', 'Black', null, 'credit_card', 'pickup', 9, 9);
-INSERT INTO public.orders (order_id, comment, email, first_name, last_name, order_date, payment_method, shipping_method, subtotal, total) VALUES (83, 'dsad', 'test@asd.ru', 'dsad', 'dasd', null, 'credit_card', 'pickup', 6, 6);
-INSERT INTO public.orders (order_id, comment, email, first_name, last_name, order_date, payment_method, shipping_method, subtotal, total) VALUES (99, 'dsadadasdasd', 'test@com.com', 'Test', 'test', null, 'credit_card', 'pickup', 28, 28);
 INSERT INTO public.custom_fields (id, content, field_name, sort) VALUES (3, '<h3>Open Monday-Friday</h3><p>8:00am - 9:00pm', 'header_contact_work_time', 3);
 INSERT INTO public.custom_fields (id, content, field_name, sort) VALUES (4, '#twitter', 'social_twitter', 0);
 INSERT INTO public.custom_fields (id, content, field_name, sort) VALUES (5, '#facebook', 'social_facebook', 0);

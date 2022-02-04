@@ -16,6 +16,6 @@ eureka:
 mail:
   host: "smtp.gmail.com"
   port: 587
-  login: "azeroth999"
-  password: "s@6!st$gs#t5"
+  login: "login"
+  password: "password"
   debug: "true"
