@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: "email-service"
+  devtools:
+    restart:
+      enabled: false
+
+server:
+  port: 0
+
+eureka:
+  client:
+    service-url:
+      default-zone: "http://localhost:8761/eureka/"
+
+mail:
+  host: "smtp.gmail.com"
+  port: 587
+  login: "login"
+  password: "password"
+  debug: "true"

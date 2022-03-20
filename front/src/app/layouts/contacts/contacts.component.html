@@ -1,0 +1,98 @@
+<section class="home-slider owl-carousel img" style="background-image: url(../../../assets/images/bg_1.jpg);">
+
+  <div class="slider-item" style="background-image: url(../../../assets/images/bg_3.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row slider-text justify-content-center align-items-center">
+
+        <div class="col-md-7 col-sm-12 text-center ftco-animate">
+          <h1 class="mb-3 mt-5 bread">Contact Us</h1>
+          <p class="breadcrumbs">
+            <span class="mr-2"><a href="/">Home</a></span>
+            <span>Contact</span>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section contact-section">
+  <div class="container mt-5">
+    <div class="row block-9">
+      <div class="col-md-4 contact-info ftco-animate">
+        <div class="row">
+          <div class="col-md-12 mb-4">
+            <h2 class="h4">Contact Information</h2>
+          </div>
+          <div class="col-md-12 mb-3">
+            <p><span>Address:</span> {{ app.customFields.get('address') }}</p>
+          </div>
+          <div class="col-md-12 mb-3">
+            <p><span>Phone:</span> <a
+              href="tel://{{ app.customFields.get('phone') }}"> {{ app.customFields.get('phone') }}</a></p>
+          </div>
+          <div class="col-md-12 mb-3">
+            <p><span>Email:</span> <a
+              href="mailto:{{ app.customFields.get('email') }}"> {{ app.customFields.get('email') }}</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-6 ftco-animate">
+        <form class="contact-form" [formGroup]="contactForm">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group required" [ngClass]="displayFieldCss('name')">
+                <input type="text" class="form-control" name="name" id="name" placeholder="Name *"
+                       formControlName="name">
+                <app-field-error-display
+                  [displayError]="isFieldValid('name')"
+                  errorMsg="Name is empty">
+                </app-field-error-display>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group required" [ngClass]="displayFieldCss('email')">
+                <input type="text" class="form-control" name="email" id="email" placeholder="Email *"
+                       formControlName="email">
+                <app-field-error-display
+                  [displayError]="isFieldValid('email')"
+                  errorMsg="Email is empty">
+                </app-field-error-display>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                   formControlName="subject">
+          </div>
+          <div class="form-group required" [ngClass]="displayFieldCss('message')">
+            <textarea name="message" id="message" cols="30" rows="7" class="form-control"
+                      placeholder="Message *" formControlName="message"></textarea>
+            <app-field-error-display
+              [displayError]="isFieldValid('message')"
+              errorMsg="Message is empty">
+            </app-field-error-display>
+          </div>
+          <div class="form-group">
+            <input type="submit" id="contact-submit" [hidden]="contactSuccess" value="Send Message" (click)="onSubmit()"
+                   class="btn btn-primary py-3 px-5">
+          </div>
+
+          <div class="comment-success" *ngIf="contactSuccess">
+            <p>Your message successfully sent</p>
+          </div>
+
+          <div class="comment-error" *ngIf="contactError">
+            <p>Error while sending message.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="map"></div>

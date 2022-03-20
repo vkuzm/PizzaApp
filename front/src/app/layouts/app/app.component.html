@@ -1,0 +1,96 @@
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/"><span class="flaticon-pizza-1 mr-1"></span>
+      <span [innerHTML]="customFields.get('title') | safeHtml"></span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+    <div class="collapse navbar-collapse" id="ftco-nav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><a
+          href="/" class="nav-link">Home</a></li>
+        <li class="nav-item" routerLink="/menu" routerLinkActive="active"><a href="/menu" class="nav-link">Menu</a></li>
+        <li class="nav-item" routerLink="/services" routerLinkActive="active"><a href="/services" class="nav-link">Services</a>
+        </li>
+        <li class="nav-item" routerLink="/blog" routerLinkActive="active"><a href="/blog" class="nav-link">Blog</a></li>
+        <li class="nav-item" routerLink="/contacts" routerLinkActive="active"><a href="/contacts" class="nav-link">Contacts</a>
+        </li>
+        <li class="nav-item" routerLink="/checkout" routerLinkActive="active"><a href="/checkout" class="nav-link">
+          <app-component-mini-cart></app-component-mini-cart>
+        </a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
+<footer class="ftco-footer ftco-section img">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+        <div class="ftco-footer-widget mb-4">
+          <div [innerHTML]="customFields.get('footer_about') | safeHtml"></div>
+
+          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+            <li class="ftco-animate"><a href="{{ customFields.get('social_twitter') }}"><span
+              class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="{{ customFields.get('social_facebook') }}"><span
+              class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="{{ customFields.get('social_instagram') }}"><span
+              class="icon-instagram"></span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Recent Blog</h2>
+
+            <div *ngFor="let post of recentPosts" class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" [ngStyle]="{'background-image': 'url(' + post.image + ')'}"></a>
+              <div class="text">
+                <h3 class="heading"><a href="{{ post.href }}">{{ post.title }}</a></h3>
+                <div class="meta">
+                  <div><a href="{{ post.href }}"><span
+                    class="icon-calendar"></span> {{ post.createdAt | date: "dd MMMM y" }}</a></div>
+                  <div><a href="{{ post.href }}#comments"><span class="icon-chat"></span> {{ post.commentCount }}</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-5 mb-md-5">
+        <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Have a Questions?</h2>
+          <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon icon-map-marker"></span><span class="text">{{ customFields.get('address') }}</span>
+              </li>
+              <li><a href="#"><span class="icon icon-phone"></span><span
+                class="text">{{ customFields.get('phone') }}</span></a></li>
+              <li><a href="#"><span class="icon icon-envelope"></span><span
+                class="text">{{ customFields.get('email') }}</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center">
+
+        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+          All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a
+            href="https://colorlib.com" target="_blank">Colorlib</a>
+          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,120 @@
+<section class="home-slider owl-carousel img" style="background-image: url(../../../assets/images/bg_1.jpg);">
+
+  <div class="slider-item" style="background-image: url(../../../assets/images/bg_3.jpg);">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row slider-text justify-content-center align-items-center">
+
+        <div class="col-md-7 col-sm-12 text-center ftco-animate">
+          <h1 class="mb-3 mt-5 bread">Read our Blog</h1>
+          <p class="breadcrumbs">
+            <span class="mr-2"><a href="/">Home</a></span>
+            <span class="mr-2"><a href="/blog">Blog</a></span>
+            <span>Blog Single</span></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-section ftco-degree-bg">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 ftco-animate">
+        <h2 class="mb-3">{{ post?.title }}</h2>
+        <div [innerHTML]="post?.description | safeHtml"></div>
+
+        <div class="pt-5 mt-5">
+          <h3 class="mb-5">
+            {{ post?.commentCount }}
+            {{ post?.commentCount > 1 ? "Comments" : "Comment" }}
+          </h3>
+          <ul class="comment-list">
+
+            <li *ngFor="let comment of post?.comments" class="comment">
+              <div class="vcard bio">
+                <img src="/assets/images/default-avatar.png" alt="{{ comment.name }}">
+              </div>
+              <div class="comment-body">
+                <h3>{{ comment.name }}</h3>
+                <div class="meta">{{ post.createdAt | date: "dd MMMM y" }}</div>
+                <p>{{ comment.message }}</p>
+              </div>
+            </li>
+
+            <li *ngIf="post?.comments.length == 0">No comments</li>
+
+          </ul>
+          <!-- END comment-list -->
+
+          <div class="comment-form-wrap pt-5">
+            <h3 class="mb-5">Leave a comment</h3>
+
+            <form [formGroup]="commentForm">
+              <div class="form-group required" [ngClass]="displayFieldCss('name')">
+                <label for="name">Name *</label>
+                <input type="text" class="form-control" name="name" id="name" formControlName="name">
+                <app-field-error-display
+                  [displayError]="isFieldValid('name')"
+                  errorMsg="Name is empty">
+                </app-field-error-display>
+              </div>
+
+              <div class="form-group required" [ngClass]="displayFieldCss('email')">
+                <label for="email">Email *</label>
+                <input type="email" class="form-control" name="email" id="email" formControlName="email">
+                <app-field-error-display
+                  [displayError]="isFieldValid('email')"
+                  errorMsg="Incorrect or empty email">
+                </app-field-error-display>
+              </div>
+
+              <div class="form-group required" [ngClass]="displayFieldCss('message')">
+                <label for="message">Message *</label>
+                <textarea name="message" id="message" cols="30" rows="5" class="form-control"
+                          formControlName="message"></textarea>
+                <app-field-error-display
+                  [displayError]="isFieldValid('message')"
+                  errorMsg="Message is empty">
+                </app-field-error-display>
+              </div>
+
+              <div class="form-group">
+                <input type="submit" id="comment-submit" [hidden]="commentSuccess" value="Post Comment" (click)="onSubmit()"
+                       class="btn py-3 px-4 btn-primary">
+              </div>
+
+              <div class="comment-success" *ngIf="commentSuccess">
+                  <p>Your comment successfully added</p>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div> <!-- .col-md-8 -->
+      <div class="col-md-4 sidebar recent-posts ftco-animate">
+
+        <div *ngIf="recentPosts?.length > 0" class="sidebar-box ftco-animate">
+          <h3>Recent Blog</h3>
+          <div *ngFor="let post of recentPosts" class="block-21 mb-4 d-flex">
+            <a class="blog-img mr-4" [ngStyle]="{'background-image': 'url(' + post.image + ')'}"></a>
+            <div class="text">
+              <h3 class="heading"><a href="{{ post.href }}">{{ post.title }}</a></h3>
+              <p class="short-description">{{ post.shortDescription }}</p>
+              <div class="meta">
+                <div><a href="{{ post.href }}"><span
+                  class="icon-calendar"></span> {{ post.createdAt | date: "dd MMMM y" }}</a></div>
+                <div><a href="{{ post.href }}#comments"><span class="icon-chat"></span> {{ post.commentCount }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section> <!-- .section -->

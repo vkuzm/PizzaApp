@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: "server-gateway"
+
+eureka:
+  client:
+    service-url:
+      default-zone: "http://localhost:8761/eureka/"
+
+zuul:
+  ignored-services: "*"
+  routes:
+    admin-service:
+      path: "/admin-service/**"
+      service-id: "admin-service"
+    checkout-service:
+      path: "/checkout-service/**"
+      service-id: "checkout-service"
+    email-service:
+      path: "/email-service/**"
+      service-id: "email-service"
+    information-service:
+      path: "/information-service/**"
+      service-id: "information-service"
+    product-service:
+      path: "/product-service/**"
+      service-id: "product-service"
+    common-service:
+      path: "/common-service/**"
+      service-id: "common-service"

@@ -1,0 +1,38 @@
+spring:
+  application:
+    name: "product-service"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: password
+  jpa:
+    database: postgresql
+    show-sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        format_sql: true
+        temp:
+          use_jdbc_metadata_defaults: false
+        jdbc:
+          lob:
+            non_contextual_creation: true
+  devtools:
+    restart:
+      enabled: false
+  data:
+    rest:
+      detection-strategy: annotated
+      default-media-type: application/json
+      base-path: "/api"
+
+server:
+  port: 0
+
+eureka:
+    client:
+      service-url:
+        default-zone: "http://localhost:8761/eureka/"

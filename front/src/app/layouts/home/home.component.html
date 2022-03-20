@@ -1,0 +1,64 @@
+<app-component-slider></app-component-slider>
+
+<section class="ftco-intro">
+  <div class="container-wrap">
+    <div class="wrap d-md-flex">
+      <div class="info">
+        <div class="row no-gutters">
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="icon"><span class="icon-phone"></span></div>
+            <div class="text" [innerHTML]="app.customFields.get('header_contact_phone') | safeHtml"></div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="icon"><span class="icon-my_location"></span></div>
+            <div class="text" [innerHTML]="app.customFields.get('header_contact_address') | safeHtml"></div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+            <div class="icon"><span class="icon-clock-o"></span></div>
+            <div class="text" [innerHTML]="app.customFields.get('header_contact_work_time') | safeHtml"></div>
+          </div>
+        </div>
+      </div>
+      <div class="social d-md-flex pl-md-5 p-4 align-items-center">
+        <ul class="social-icon">
+          <li class="ftco-animate"><a href="{{ app.customFields.get('social_twitter') }}"><span
+            class="icon-twitter"></span></a></li>
+          <li class="ftco-animate"><a href="{{ app.customFields.get('social_facebook') }}"><span
+            class="icon-facebook"></span></a></li>
+          <li class="ftco-animate"><a href="{{ app.customFields.get('social_instagram') }}"><span
+            class="icon-instagram"></span></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="ftco-about d-md-flex">
+  <div class="one-half img" style="background-image: url(../../../assets/images/about.jpg);"></div>
+  <div class="one-half ftco-animate" [innerHTML]="app.customFields.get('about') | safeHtml"></div>
+</section>
+
+<section class="ftco-section ftco-services">
+  <div class="overlay"></div>
+  <div class="container" [innerHTML]="app.customFields.get('our_services') | safeHtml"></div>
+</section>
+
+<app-component-top-products></app-component-top-products>
+
+<section class="ftco-counter ftco-bg-dark img" id="section-counter"
+         style="background-image: url(../../../assets/images/bg_2.jpg);" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="row" [innerHTML]="app.customFields.get('statistics') | safeHtml"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-component-showcase></app-component-showcase>
+
+<app-component-recent-blog></app-component-recent-blog>
+
+<app-component-contact-form></app-component-contact-form>

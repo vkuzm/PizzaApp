@@ -1,0 +1,28 @@
+<section class="home-slider owl-carousel img" style="background-image: url(../../../assets/images/bg_1.jpg);">
+
+  <div *ngFor="let slide of slides" class="slider-item"
+       [ngStyle]="slide.backgroundImage ? {'background-image': 'url(' + slide.image + ')'} : ''">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row slider-text align-items-center {{ slide.justifyCenter ? 'justify-content-center' : '' }}"
+           data-scrollax-parent="true">
+
+        <div class="col-md-6 col-sm-12 ftco-animate {{ slide.styles != null ? slide.styles : '' }}">
+          <span class="subheading">{{ slide.subtitle }}</span>
+          <h1 class="mb-4">{{ slide.title }}</h1>
+          <p class="mb-4 mb-md-5">{{ slide.description }}</p>
+          <p *ngIf="slide.orderButton || slide.viewButton">
+            <a *ngIf="slide.orderButton" href="#" (click)="cartService.addToCart(slide.productId)"
+               class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Now</a>
+            <a *ngIf="slide.viewButton" href="/menu"
+               class="btn btn-white btn-outline-white p-3 px-xl-4 py-xl-3">View Menu</a>
+          </p>
+        </div>
+        <div *ngIf="!slide.backgroundImage" class="col-md-6 ftco-animate">
+          <img alt="{{ slide.title }}" class="img-fluid" src="{{ slide.image }}">
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

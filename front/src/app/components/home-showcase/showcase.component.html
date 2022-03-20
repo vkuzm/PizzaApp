@@ -1,0 +1,54 @@
+<section class="ftco-menu">
+  <div class="container-fluid">
+    <div class="row d-md-flex">
+      <div class="col-lg-4 ftco-animate img f-menu-img mb-5 mb-md-0"
+           style="background-image: url(../../../assets/images/about.jpg);">
+      </div>
+      <div class="col-lg-8 ftco-animate p-md-5">
+        <div class="row">
+          <div class="col-md-12 nav-link-wrap mb-5">
+            <div class="nav ftco-animate nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+
+              <a *ngFor="let category of categories; let tabIndex = index"
+                 class="{{ tabIndex == 0 ? 'nav-link active' : 'nav-link'}}"
+                 id="{{ 'v-pills-' + tabIndex + '-tab' }}" data-toggle="pill"
+                 href="{{ '#v-pills-' + tabIndex + '' }}" role="tab"
+                 [attr.aria-controls]="'v-pills-' + tabIndex"
+                 aria-selected="true">{{ category.name }}</a>
+
+            </div>
+          </div>
+          <div class="col-md-12 d-flex align-items-center">
+
+            <div class="tab-content ftco-animate" id="v-pills-tabContent">
+
+              <div *ngFor="let category of categories; let tabIndex = index"
+                   class="{{ tabIndex == 0 ? 'tab-pane fade show active' : 'tab-pane fade' }}"
+                   id="{{'v-pills-' + tabIndex }}" role="tabpanel"
+                   [attr.aria-labelledby]="'v-pills-' + tabIndex + '-tab'">
+                <div class="row">
+
+                  <div *ngFor="let product of category.products" class="col-md-4 text-center">
+                    <div class="menu-wrap">
+                      <div class="menu-img img mb-4"
+                         [ngStyle]="{'background-image': 'url(' + product.image + ')'}"></div>
+                      <div class="text">
+                        <h3>{{ product.name }}</h3>
+                        <p>{{ product.shortDescription }}</p>
+                        <p class="price"><span>{{ product.price | currency: 'USD' : "symbol" : "1.2"}}</span></p>
+                        <p><a href="#" (click)="cartService.addToCart(product.productId)" class="btn btn-white btn-outline-white">Add to
+                          cart</a></p>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

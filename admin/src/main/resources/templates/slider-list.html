@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layouts/default">
+<body>
+
+<div id="page" layout:fragment="content">
+
+    <!-- page content -->
+    <div class="right_col" role="main">
+        <div>
+            <div class="clearfix"></div>
+
+            <div class="row">
+
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>SLIDER</h2>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <table id="datatable-checkbox" class="table table-striped table-bordered bulk_action">
+                                <thead>
+                                <tr>
+                                    <th>Image</th>
+                                    <th>Title</th>
+                                    <th>Subtitle</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+
+                                <tbody>
+                                <tr th:each="slide: ${slider}">
+                                    <td><img th:src="${slide.image}" alt="" style="max-height:50px"></td>
+                                    <td th:text="${slide.title}"></td>
+                                    <td th:text="${slide.subtitle}"></td>
+                                    <td><a th:href="'/admin/slider/edit/' + ${slide.id}">Edit</a> | <a
+                                            th:href="'/admin/slider/delete/' + ${slide.id}">Delete</a></td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                            <a class="btn btn-primary text-right" href="/admin/slider/create">Add slide</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /page content -->
+
+</body>
+</html>
