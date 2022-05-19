@@ -2,6 +2,9 @@
 <p>Simple pizza order.</p>
 <p>Microservices Netflix OSS: Spring + Angular</p>
 
+<h3>Run command</h3>
+<p>./mvnw clean install && docker-compose up</p>
+
 <h2>Front-End</h2>
 <ul>
   <li>Javascript</li>
