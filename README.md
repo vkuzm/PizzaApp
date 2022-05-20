@@ -2,8 +2,12 @@
 <p>Simple pizza order.</p>
 <p>Microservices Netflix OSS: Spring + Angular</p>
 
-<h3>Run command</h3>
-<p>./mvnw clean install && docker-compose up</p>
+<h3>Run commands:</h3>
+<p>docker-compose up</p>
+
+<p>Front UI: <a href="http://localhost:4200">http://localhost:4200</a></p>
+<p>Admin UI: <a href="http://localhost:7000/admin">http://localhost:7000/admin</a></p>
+<p>Admin login: <b>admin</b> <b>admin</b></p>
 
 <h2>Front-End</h2>
 <ul>

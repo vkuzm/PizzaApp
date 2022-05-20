@@ -20,7 +20,7 @@ public class NotificationServiceImpl implements NotificationService {
     @Override
     public void orderEmailNotification(Order order) {
         new Thread(() -> {
-            String orderEmailUrl = "http://localhost:8080/email-service/api/orderEmail";
+            String orderEmailUrl = "http://gateway-service:8080/email-service/api/orderEmail";
             ResponseEntity<String> result =
                     restTemplate.postForEntity(orderEmailUrl, order, String.class);
 

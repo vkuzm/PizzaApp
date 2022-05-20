@@ -34,8 +34,7 @@ public class RestConfiguration {
     @Bean
     public RestTemplate restTemplate(final RestTemplateBuilder builder) {
         final ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES,
-                false);
+        mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         mapper.registerModule(new Jackson2HalModule());
 
         final MappingJackson2HttpMessageConverter converter

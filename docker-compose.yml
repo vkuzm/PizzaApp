@@ -1,16 +1,125 @@
 version: "3.1"
 
+networks:  
+  backend-network:  
+    name: backend-network  
+    driver: bridge
+
 services:
+  frontend-service:
+    build:
+      dockerfile: Dockerfile
+      context: ./frontend
+    restart: on-failure
+    ports:
+      - "4200:4200"
+
+  eureka-server:
+    build:
+      dockerfile: Dockerfile
+      context: ./registry
+    restart: on-failure
+    networks:
+      - backend-network
+    environment:
+      eureka.instance.hostname: eureka-server
+      eureka.client.serviceUrl.defaultZone: http://eureka-server:8761/eureka
+
+  gateway-service:
+    build:
+      dockerfile: Dockerfile
+      context: ./gateway
+    restart: on-failure
+    ports:
+      - "8080:8080"
+    depends_on:
+      - eureka-server
+    networks:
+      - backend-network
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://eureka-server:8761/eureka
+
+  common-service:
+    build:
+      dockerfile: Dockerfile
+      context: ./common
+    restart: on-failure
+    depends_on:
+      - eureka-server
+      - gateway-service
+    networks:
+      - backend-network
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://eureka-server:8761/eureka
+
+  product-service:
+    build:
+      dockerfile: Dockerfile
+      context: ./product
+    restart: on-failure
+    depends_on:
+      - eureka-server
+      - gateway-service
+    networks:
+      - backend-network
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://eureka-server:8761/eureka
+
+  information-service:
+    build:
+      dockerfile: Dockerfile
+      context: ./information
+    restart: on-failure
+    depends_on:
+      - eureka-server
+      - gateway-service
+    networks:
+      - backend-network
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://eureka-server:8761/eureka
+
+  checkout-service:
+    build:
+      dockerfile: Dockerfile
+      context: ./checkout
+    restart: on-failure
+    depends_on:
+      - eureka-server
+      - gateway-service
+    networks:
+      - backend-network
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://eureka-server:8761/eureka
+
+  email-service:
+    build:
+      dockerfile: Dockerfile
+      context: ./email
+    restart: on-failure
+    depends_on:
+      - eureka-server
+      - gateway-service
+    networks:
+      - backend-network
+    environment:
+      eureka.client.serviceUrl.defaultZone: http://eureka-server:8761/eureka
+
+  admin-service:
+    build:
+      dockerfile: Dockerfile
+      context: ./admin
+    restart: on-failure
+    networks:
+      - backend-network
+    ports:
+      - "7000:7000"
 
   db:
     image: postgres:latest
-    container_name: pizza_db
     restart: always
     environment:
-      #- POSTGRES_DB=postgres
-      #- POSTGRES_USER=root
       - POSTGRES_PASSWORD=password
+    networks:
+      - backend-network
     volumes:
       - ./pizza_data.sql:/docker-entrypoint-initdb.d/pizza_data.sql
-    ports:
-      - "5432:5432"

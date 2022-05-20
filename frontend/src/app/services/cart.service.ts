@@ -15,21 +15,17 @@ export class CartService {
   private items: CartItem[] = [];
   private cartUpdated = new Subject<CartItem[]>();
 
-  constructor(private http: HttpClient, private apiUrl: ApiUrls, private cookie: CookieService) {
-  }
+  constructor(private http: HttpClient, private apiUrl: ApiUrls) {}
 
   getCart() {
-    let getCartProducts = this.cookie.get(this.cookieCart);
-    if (getCartProducts.length > 0) {
-      this.items = JSON.parse(getCartProducts);
-
-      return this.http.post(
-        this.apiUrl.getCartUrl,
-        this.items, {
-          headers: new HttpHeaders()
-            .set('Content-type', 'application/json')
-            .set('Accept', 'application/json'),
-        });
+    if (this.getCartCookie()) {
+        return this.http.post(
+          this.apiUrl.getCartUrl,
+          this.items, {
+            headers: new HttpHeaders()
+              .set('Content-type', 'application/json')
+              .set('Accept', 'application/json'),
+          });
     }
 
     return false;
@@ -55,7 +51,7 @@ export class CartService {
       this.items.push(new CartItem(productId, this.quantityByDefault));
     }
 
-    console.log(this.items);
+    //console.log(this.items);
 
     this.updateCart();
   }
@@ -90,8 +86,8 @@ export class CartService {
   }
 
   getCartCookie() {
-    let getCartProducts = this.cookie.get(this.cookieCart);
-    if (getCartProducts.length > 0) {
+    let getCartProducts = localStorage.getItem(this.cookieCart);
+    if (getCartProducts && getCartProducts.length > 0) {
       this.items = JSON.parse(getCartProducts);
     }
 
@@ -99,7 +95,8 @@ export class CartService {
   }
 
   updateCart() {
-    this.cookie.set(this.cookieCart, JSON.stringify(this.items));
+  console.log('11111', this.items)
+    localStorage.setItem(this.cookieCart, JSON.stringify(this.items));
     this.cartUpdated.next();
   }
 
@@ -110,7 +107,7 @@ export class CartService {
   clearCart() {
     this.items = [];
     this.updateCart();
-    this.cookie.delete(this.cookieCart);
+    localStorage.removeItem(this.cookieCart);
   }
 
 }

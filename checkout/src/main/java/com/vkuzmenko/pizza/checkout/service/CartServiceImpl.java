@@ -21,7 +21,7 @@ public class CartServiceImpl implements CartService {
             for (CartItemDto cartItem : cartItemList) {
                 if (cartItem.getProductId() > 0) {
                     ProductDto product = restTemplate
-                            .getForObject("http://localhost:8080/product-service/api/products/" +
+                            .getForObject("http://gateway-service:8080/product-service/api/products/" +
                                     cartItem.getProductId(), ProductDto.class);
 
                     if (product != null) {

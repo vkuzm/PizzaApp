@@ -3,12 +3,6 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
-        <relativePath/>
-    </parent>
 
     <groupId>com.vkuzmenko.pizza</groupId>
     <artifactId>all</artifactId>
@@ -16,13 +10,26 @@
     <packaging>pom</packaging>
 
     <modules>
+        <module>registry</module>
+        <module>gateway</module>
+        <module>common</module>
+        <module>product</module>
+        <module>information</module>
         <module>admin</module>
         <module>checkout</module>
-        <module>common</module>
         <module>email</module>
-        <module>gateway</module>
-        <module>information</module>
-        <module>product</module>
-        <module>registry</module>
     </modules>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

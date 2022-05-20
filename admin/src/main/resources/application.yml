@@ -14,10 +14,4 @@ spring:
       base-path: ""
 
 server:
-  port: 8081
-
-eureka:
-  client:
-    service-url:
-      default-zone: "http://localhost:8761/eureka/"
-
+  port: 7000

@@ -2,7 +2,7 @@ spring:
   application:
     name: "information-service"
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://db:5432/postgres
     username: postgres
     password: password
   jpa:
@@ -31,8 +31,3 @@ spring:
 
 server:
   port: 0
-
-eureka:
-  client:
-    service-url:
-      default-zone: "http://localhost:8761/eureka/"
